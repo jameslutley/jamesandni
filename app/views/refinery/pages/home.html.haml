@@ -1,0 +1,6 @@
+%section.section.section--height-1.section--invert
+  - if @page.background_image.present?
+    .section__cover{ style: "background-image: url(#{@page.background_image.url}); " }
+  .section__container
+    .section__hero
+      =raw @page.content_for(:body)

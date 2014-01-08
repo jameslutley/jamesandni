@@ -1,0 +1,15 @@
+%section.section.section--height-2.section--invert
+  - if @page.background_image.present?
+    .section__cover{ style: "background-image: url(#{@page.background_image.url}); " }
+  .section__container
+    .section__hero
+      .text--centered
+        %h1.section__hero__header
+          = raw @page.title
+          
+%section.section
+  .section__container.section__container--narrow-column
+    .copy
+      = raw @page.content_for(:ceremony)
+      = raw @page.content_for(:reception)
+      = raw @page.content_for(:after_party)

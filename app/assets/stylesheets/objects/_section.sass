@@ -1,0 +1,70 @@
+//////////////////////////
+$container__min: em(300)
+$section__container__max: em(1200)
+$section__container__padding: em($unit--gutter)
+//////////////////////////
+.section
+  width: 100%
+  +translateZ(0)
+  +box-sizing(border-box)
+  @extend .relative
+  @extend %zero-pad
+  overflow: hidden
+
+.section__container
+  @extend .relative
+  height: 100%
+  // width: 100%
+  max-width: $section__container__max
+  padding: 0
+  margin: 0 auto
+  border-left: em($unit--gutter) solid transparent
+  border-right: em($unit--gutter) solid transparent
+
+.section__container--narrow-column
+  max-width: $fonts__max-line-length
+
+.section__heading
+  margin-top: em($unit--baseline * 2)
+  margin-bottom: em($unit--baseline * 2)
+  @extend .text--centered
+
+  .section__heading__title
+    line-height: 1.5em
+    margin-bottom: 0
+
+  .section__heading__headline
+    @extend .text--small
+
+.section--height-1
+  height: em(720)
+
+.section--height-2
+  height: em(528)
+
+.section--invert
+  @extend .text--invert
+
+.section__cover
+  +inline-block
+  +background-size(cover)
+  background-position: center top
+  width: 100%
+  height: 100%
+  overflow: hidden
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+
+.section__hero
+  position: absolute
+  bottom: em($unit * 4)
+  width: 100%
+  +font-size(48, 60)
+  @extend .text--centered
+
+.section__hero__header
+  @extend .text--caps
+  margin-bottom: em($unit--baseline * 3)
+

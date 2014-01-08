@@ -1,0 +1,14 @@
+!!! 5
+%html
+  = render "/refinery/html_tag"
+  - site_bar = render('/refinery/site_bar', :head => true)
+  %head
+    = render "/refinery/head"
+    %body.relative
+      = site_bar
+      = render "/refinery/header"
+      %div{ role: "main" }
+        = yield
+      %footer{ role: "contentinfo" }
+        = render "/refinery/footer"
+      = render "/refinery/javascripts"

@@ -1,0 +1,17 @@
+%header{ class: "header header--absolute header--invert block cf #{@class_footer.presence}", role: "banner" }
+  .container
+    %a{ :href => refinery.root_path, :class => "logo" }
+      James
+      %span.ampersand &amp;
+      Ni
+    -# %nav{ class: "navigation", role: "navigation" }
+      = Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html
+    %ul.nav.nav--gapped.nav--primary.cf
+      %li.nav--primary__item
+        = link_to "Wedding details", "/wedding-details"
+      %li.nav--primary__item
+        = link_to "Travel", "#"    
+      %li.nav--primary__item
+        = link_to "Photos", "#"    
+      %li.nav--primary__item
+        = link_to "Blog", "/blog"    

@@ -1,0 +1,38 @@
+.nav
+  li
+    display: inline-block
+
+.nav--block
+  @extend .cf
+  li
+    float: left
+  a
+    display: block
+    border-bottom: none
+
+.nav--divided
+  li
+    padding-left: em($unit--double)
+    padding-right: em($unit--double)
+    +set-border(left)
+    &:first-child
+      padding-left: 0
+      border-left: none
+
+.nav--gapped
+  li
+    margin-left: em($unit--baseline) 
+
+.nav--primary
+  @extend .fr
+  .nav--primary__item
+    > a
+      +font-size(14)
+      @extend .text--medium
+      @extend .text--caps
+      +on-interaction
+        text-decoration: none 
+
+      .header--invert &
+        @extend .text--invert
+
